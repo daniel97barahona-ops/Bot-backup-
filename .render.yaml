@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: telegram-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn bot:starlette_app --port ${PORT}
+    envVars:
+      - key: 8432653727:AAGIyqPf9nC_IdvG24Crnk5pbA6ZVweyIvY
+        sync: false
